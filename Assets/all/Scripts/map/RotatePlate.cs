@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
 {
-    Rigidbody rig;
+    Rigidbody rigidbody;
 
     void Start()
     {
-        rig = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        rig.angularVelocity = Vector3.forward * 5.0f;
+        rigidbody.angularVelocity = Vector3.forward * 5.0f;
     }
 }
