@@ -13,6 +13,6 @@ public class RotateSelf : MonoBehaviour
 
     void Update()
     {
-        rig.angularVelocity = Vector3.forward * Mathf.PI;
+        rig.angularVelocity = Vector3.forward * 5.0f;
     }
 }
