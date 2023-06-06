@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rig;
+
     void Start()
     {
-        
+        rig = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        rig.angularVelocity = Vector3.forward * Mathf.PI;
     }
 }
