@@ -62,7 +62,8 @@ public class GameController : MonoBehaviour
                 spawnGameObject = chestnut;
             }
 
-            Instantiate(spawnGameObject.transform, spawnPoint.transform.position, Quaternion.identity);
+            Transform tmp = Instantiate(spawnGameObject.transform, spawnPoint.transform.position, Quaternion.identity);
+            tmp.name = spawnGameObject.name;
             lastSpawnTime = Time.time;
         }
 

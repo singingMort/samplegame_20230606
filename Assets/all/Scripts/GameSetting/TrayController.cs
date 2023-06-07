@@ -1,24 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float score = 0;
+    public TextMeshProUGUI scoreText;
+    public string foodName = "";
+
     void Start()
     {
-
+        // textMeshProUI = this.GetComponent<TextMeshProUGUI>();
+        // textMeshProUI = transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        scoreText.text = score.ToString();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         Destroy(collision.gameObject);
-        Debug.Log("“–‚½‚Á‚½!");
+        if (collision.transform.name == foodName)
+        {
+            score = score + 1;
+        }
     }
 }

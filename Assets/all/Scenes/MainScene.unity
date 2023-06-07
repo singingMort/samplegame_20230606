@@ -1098,6 +1098,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6157020608893303718, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u304F\u308A"
+      objectReference: {fileID: 0}
     - target: {fileID: 8132100592093648113, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
       propertyPath: m_Camera
@@ -1209,7 +1214,7 @@ GameObject:
   - component: {fileID: 823806483}
   - component: {fileID: 823806482}
   m_Layer: 0
-  m_Name: BackGround
+  m_Name: "\u80CC\u666F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,6 +1432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157020608893303718, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u3076\u3069\u3046"
       objectReference: {fileID: 0}
     - target: {fileID: 8132100592093648113, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
@@ -1677,7 +1687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1496976802}
   m_Layer: 0
-  m_Name: "\u624B\u524D"
+  m_Name: "\u3059\u3053\u3057\u307E\u3048"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2451,6 +2461,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6157020608893303718, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u304A\u308C\u3093\u3058"
+      objectReference: {fileID: 0}
     - target: {fileID: 8132100592093648113, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
       propertyPath: m_Camera
@@ -2644,6 +2659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157020608893303718, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u308A\u3093\u3054"
       objectReference: {fileID: 0}
     - target: {fileID: 8132100592093648113, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
