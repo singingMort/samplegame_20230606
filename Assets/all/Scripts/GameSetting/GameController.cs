@@ -5,9 +5,13 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     private float lastSpawnTime;
+    // りんご
     public GameObject apple;
+    // ぐれーぷ
     public GameObject grape;
+    // おれんじ
     public GameObject orange;
+    // くり
     public GameObject chestnut;
 
     public GameObject spawnPoint;
@@ -20,13 +24,11 @@ public class GameController : MonoBehaviour
         spawnPointRigidbody = spawnPoint.GetComponent<Rigidbody>();
         spawnPointRigidbody.velocity = new Vector3(1.0f, 0, 0);
     }
-
     // Update is called once per frame
 
 
     void Update()
     {
-
         if (spawnPoint.transform.position.x > 5.0f)
         {
             spawnPointRigidbody.velocity = new Vector3(-1.0f, 0, 0);
@@ -40,9 +42,9 @@ public class GameController : MonoBehaviour
 
         if (Time.time > lastSpawnTime + 1)
         {
-            // 0.0から1.0の間でランダムな値を取得する
+            // 0.0から1.0のあいだでランダムなあたいをしゅとくする
             float randomValue = UnityEngine.Random.value;
-
+            Debug.Log(randomValue);
             GameObject spawnGameObject;
             if (randomValue < 0.25f)
             {
@@ -60,7 +62,6 @@ public class GameController : MonoBehaviour
             {
                 spawnGameObject = chestnut;
             }
-
 
             Instantiate(spawnGameObject.transform, spawnPoint.transform.position, Quaternion.identity);
             lastSpawnTime = Time.time;
