@@ -6,11 +6,14 @@ public class RotateSelf : MonoBehaviour
 {
     Rigidbody rigidbody;
 
-    // ‚©‚¢‚Ä‚ñ‚Ì‚Þ‚«‚«‚ß‚Ü‚·
+    
     [Tooltip("‚©‚¢‚Ä‚ñ‚Ì‚Þ‚«‚«‚ß‚Ü‚·")]
     public bool rotationDirection;
 
-    
+    [Tooltip("‚©‚¢‚Ä‚ñ‚Ì‚»‚­‚Ç‚ð‚«‚ß‚Ü‚·")]
+    public float rotateSpeed = 8.0f;
+
+
 
     void Start()
     {
@@ -19,6 +22,15 @@ public class RotateSelf : MonoBehaviour
 
     void Update()
     {
-        rigidbody.angularVelocity = Vector3.forward * 5.0f;
+
+        if (rotationDirection)
+        {
+            rigidbody.angularVelocity = Vector3.forward * rotateSpeed;
+        }
+        else
+        {
+            rigidbody.angularVelocity = Vector3.forward * -rotateSpeed;
+        }
+        
     }
 }
