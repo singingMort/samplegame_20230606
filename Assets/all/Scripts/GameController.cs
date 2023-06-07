@@ -4,71 +4,80 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [Tooltip("さいごにたべものをせいせいじかんをほぞん")]
     private float lastSpawnTime;
-    // りんご
+
+    [Tooltip("りんご")]
     public GameObject apple;
-    // ぐれーぷ
+
+    [Tooltip("ぐれーぷ")]
     public GameObject grape;
-    // おれんじ
+
+    [Tooltip("おれんじ")]
     public GameObject orange;
-    // くり
+
+    [Tooltip("くり")]
     public GameObject chestnut;
 
+    [Tooltip("すぽーんぶろっくいち")]
     public GameObject spawnPoint;
+
+    [Tooltip("すぽーんのごうたい")]
     public Rigidbody spawnPointRigidbody;
-
-
-    // げーむきどうじにいっかいだけきどうする
+    
     void Start()
     {
+        // ゲームきどうじにすぽーんぶろっくがみぎがわにいどうするようにする
         spawnPointRigidbody = spawnPoint.GetComponent<Rigidbody>();
         spawnPointRigidbody.velocity = new Vector3(1.0f, 0, 0);
     }
 
-    // まいふれーむじっこうします
+    
     void Update()
     {
+        // ひだりがわにとうたつしたらみぎほうこうにいどう
         if (spawnPoint.transform.position.x >= 4.5f)
         {
             spawnPointRigidbody.velocity = new Vector3(-1.0f, 0, 0);
-
         }
+        // みぎがわにとうたつしたらひだりほうこうにいどう
         else if (spawnPoint.transform.position.x <= -4.5f)
         {
             spawnPointRigidbody.velocity = new Vector3(1.0f, 0, 0);
         }
 
-
+        // いちびょうかんかくでたべものをすぽーん
         if (Time.time > lastSpawnTime + 1)
         {
             // 0.0から1.0のあいだでランダムなあたいをしゅとくする
-            float randomValue = UnityEngine.Random.value;
-            Debug.Log(randomValue);
+            float randomValue = Random.value;
             GameObject spawnGameObject;
-            if (randomValue < 0.25f)
+
+            // randomValueが0.25いかのばあいグレープをせいせい
+            if (randomValue <= 0.25f)
             {
                 spawnGameObject = grape;
             }
-            else if (randomValue < 0.5f)
+            // randomValueが0.5いかのばあいあっぷるをせいせい
+            else if (randomValue <= 0.5f)
             {
                 spawnGameObject = apple;
             }
-            else if (randomValue < 0.75f)
+            // randomValueが0.75いかのばあいおれんじをせいせい
+            else if (randomValue <= 0.75f)
             {
                 spawnGameObject = orange;
             }
+            // どれにもあてはまらなかったばあいくりをせいせい
             else
             {
                 spawnGameObject = chestnut;
             }
 
-            Transform tmp = Instantiate(spawnGameObject.transform, spawnPoint.transform.position, Quaternion.identity);
-            tmp.name = spawnGameObject.name;
+            // たべものをせいせいしてlastSpawnTimeにせいせいしたじかんをだいにゅう
+            Transform food = Instantiate(spawnGameObject.transform, spawnPoint.transform.position, Quaternion.identity);
+            food.name = spawnGameObject.name;
             lastSpawnTime = Time.time;
         }
-
-
-
-
     }
 }
