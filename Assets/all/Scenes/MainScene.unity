@@ -1089,6 +1089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u3046\u3051\u3056\u3089\u304F\u308A"
       objectReference: {fileID: 0}
+    - target: {fileID: 4422550665513029962, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u304F\u308A"
+      objectReference: {fileID: 0}
     - target: {fileID: 4708130635335414877, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
       propertyPath: m_RootOrder
@@ -1428,6 +1433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u3046\u3051\u3056\u3089\u3076\u3069\u3046"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422550665513029962, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u3076\u3069\u3046"
       objectReference: {fileID: 0}
     - target: {fileID: 4708130635335414877, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
@@ -2478,6 +2488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u3046\u3051\u3056\u3089\u304A\u308C\u3093\u3058"
       objectReference: {fileID: 0}
+    - target: {fileID: 4422550665513029962, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u304A\u308C\u3093\u3058"
+      objectReference: {fileID: 0}
     - target: {fileID: 4708130635335414877, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
       propertyPath: m_RootOrder
@@ -2612,10 +2627,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 940673940}
-  - {fileID: 584929805}
-  - {fileID: 2029283094}
   - {fileID: 433460017}
+  - {fileID: 940673940}
+  - {fileID: 2029283094}
+  - {fileID: 584929805}
   m_Father: {fileID: 1496976802}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2691,6 +2706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u3046\u3051\u3056\u3089\u308A\u3093\u3054"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422550665513029962, guid: bc09b5fbec0aa13479f9528091e19543,
+        type: 3}
+      propertyPath: foodName
+      value: "\u308A\u3093\u3054"
       objectReference: {fileID: 0}
     - target: {fileID: 4708130635335414877, guid: bc09b5fbec0aa13479f9528091e19543,
         type: 3}
