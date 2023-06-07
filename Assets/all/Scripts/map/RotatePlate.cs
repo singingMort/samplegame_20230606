@@ -6,6 +6,12 @@ public class RotateSelf : MonoBehaviour
 {
     Rigidbody rigidbody;
 
+    // ‚©‚¢‚Ä‚ñ‚Ì‚Þ‚«‚«‚ß‚Ü‚·
+    [Tooltip("‚©‚¢‚Ä‚ñ‚Ì‚Þ‚«‚«‚ß‚Ü‚·")]
+    public bool rotationDirection;
+
+    
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();

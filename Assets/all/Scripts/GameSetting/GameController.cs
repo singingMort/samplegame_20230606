@@ -18,23 +18,22 @@ public class GameController : MonoBehaviour
     public Rigidbody spawnPointRigidbody;
 
 
-    // Start is called before the first frame update
+    // Ç∞Å[ÇﬁÇ´Ç«Ç§Ç∂Ç…Ç¢Ç¡Ç©Ç¢ÇæÇØÇ´Ç«Ç§Ç∑ÇÈ
     void Start()
     {
         spawnPointRigidbody = spawnPoint.GetComponent<Rigidbody>();
         spawnPointRigidbody.velocity = new Vector3(1.0f, 0, 0);
     }
-    // Update is called once per frame
 
-
+    // Ç‹Ç¢Ç”ÇÍÅ[ÇﬁÇ∂Ç¡Ç±Ç§ÇµÇ‹Ç∑
     void Update()
     {
-        if (spawnPoint.transform.position.x > 5.0f)
+        if (spawnPoint.transform.position.x >= 4.5f)
         {
             spawnPointRigidbody.velocity = new Vector3(-1.0f, 0, 0);
 
         }
-        else if (spawnPoint.transform.position.x < -5.0f)
+        else if (spawnPoint.transform.position.x <= -4.5f)
         {
             spawnPointRigidbody.velocity = new Vector3(1.0f, 0, 0);
         }
